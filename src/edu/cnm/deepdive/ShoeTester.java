@@ -22,7 +22,8 @@ public class ShoeTester {
         if (comparison == 0) {
           comparison = c1.getRank().compareTo(c2.getRank());
           if (comparison != 0) {
-            if (c1.getRank().equals(Rank.ACE)) {
+            // I can use the == here because they are pointing to enums, all instances of the same rank will point to the same location in emums.
+            if (c1.getRank() == (Rank.ACE)) {
               comparison = 1;
             } else if (c2.getRank().equals(Rank.ACE)) {
               comparison = -1;
